@@ -1,0 +1,24 @@
+{
+  "name": "vite-doc-creator",
+  "version": "1.0.0",
+  "description": "This is a fast and light DOCUMENT Creator.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/saucesy/vite-doc-creator.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/saucesy/vite-doc-creator/issues"
+  },
+  "homepage": "https://github.com/saucesy/vite-doc-creator#readme",
+  "dependencies": {
+    "highlight.js": "^11.6.0",
+    "marked": "^4.1.1"
+  }
+}
