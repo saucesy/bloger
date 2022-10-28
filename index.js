@@ -7,22 +7,24 @@ const {
 
 class ViteDocCreator {
   constructor(options) {
-    this.options = {
+    this._options = {
       title: undefined,
       port: 0,
       domain: undefined
     }
 
+    console.log(process.env);
+
     if (options) {
-      Object.assign(this.options, options);
+      Object.assign(this._options, options);
     }
 
     this.initialize();
   }
 
   initialize() {
-    initFiles();
-    initFolders();
+    initFolders(this._options);
+    initFiles(this._options);
     initWatchers();
   }
 }

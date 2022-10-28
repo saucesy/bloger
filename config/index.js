@@ -1,8 +1,8 @@
 const { resolve } = require("path");
 
-const port = 8080;
+const port = process.env.npm_config_port || process.env.npm_port || 5173;
 const domain = "http://localhost";
-const title = "This is a first document by Vite-Doc-Creator";
+const title = "This is my first Document by Vite-Doc-Creator";
 
 const outerPath = {
   root: resolve(__dirname, "../../../"),
@@ -20,10 +20,18 @@ const innerPath = {
   html: resolve(__dirname, "../temp_files/html/"),
 }
 
+const regexp = {
+  title: /<title>([\s\S]*?)<\/title>/,
+  menu: /<ul class="menu-list">([\s\S]*?)<\/ul>/,
+  iframe: /<div class="iframe-page">([\s\S]*?)<\/div>/,
+  headerTitle: /<h1 class="header-title">([\s\S]*?)<\/h1>/,
+}
+
 module.exports = {
   port,
   title,
   domain,
   outerPath,
-  innerPath
+  innerPath,
+  regexp
 }
