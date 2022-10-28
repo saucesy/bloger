@@ -5,6 +5,8 @@ const {
   initWatchers
 } = require("./init");
 
+const { mdToHtml } = require("./compiler");
+
 class ViteDocCreator {
   constructor(options) {
     this._options = {
@@ -12,8 +14,6 @@ class ViteDocCreator {
       port: 0,
       domain: undefined
     }
-
-    console.log(process.env);
 
     if (options) {
       Object.assign(this._options, options);

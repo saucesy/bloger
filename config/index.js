@@ -25,6 +25,7 @@ const regexp = {
   menu: /<ul class="menu-list">([\s\S]*?)<\/ul>/,
   iframe: /<div class="iframe-page">([\s\S]*?)<\/div>/,
   headerTitle: /<h1 class="header-title">([\s\S]*?)<\/h1>/,
+  markdown: /\{\{(.*?)\}\}/
 }
 
 module.exports = {
