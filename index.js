@@ -25,7 +25,7 @@ class ViteDocCreator {
   initialize() {
     initFolders(this._options);
     initFiles(this._options);
-    initWatchers();
+    initWatchers(this._options);
   }
 }
 

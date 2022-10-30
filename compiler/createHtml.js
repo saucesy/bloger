@@ -19,11 +19,11 @@ const {
   regexp
 } = require("../config");
 
-function createHtml(options) {
-  _createIndexHtml(options);
+function createHtml(options, filename) {
+  _createIndexHtml(options, filename);
 }
 
-function _createIndexHtml(options) {
+function _createIndexHtml(options, filename) {
   const _htmlFiles = readdirSync(outerPath.html);
 
   if (!_htmlFiles.length) {
@@ -36,16 +36,17 @@ function _createIndexHtml(options) {
 
   let newHtml = "";
   let menuList = "";
-  const _indexHtml = readFile(innerPath.html + "/index.html");
+  let _indexHtml = readFile(innerPath.html + "/index.html");
+  let curIdx = filename ? [].indexOf.call(_htmlFiles, filename) : 0;
 
   _htmlFiles.forEach((file, index) => {
-    menuList += _createMenuItem(file, options.domain, options.port, !index ? true : false);
+    menuList += _createMenuItem(file, options.domain, options.port, curIdx === index ? true : false);
   })
 
   newHtml = tplReplace(regexp.menu, _indexHtml, menuList);
   newHtml = tplReplace(regexp.title, newHtml, options.title || title);
   newHtml = tplReplace(regexp.headerTitle, newHtml, options.title || title);
-  newHtml = tplReplace(regexp.iframe, newHtml, _createIframe("welcome.html", options.domain, options.port));
+  newHtml = tplReplace(regexp.iframe, newHtml, _createIframe(_htmlFiles[curIdx], options.domain, options.port));
 
   writeFileSync(outerPath.root + "/index.html", newHtml);
 }

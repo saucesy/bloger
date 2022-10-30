@@ -34,7 +34,7 @@ npm i vite -D
   "build": "vite build"
 }
 ```
-5. 安装[vite-doc-creator](https://github.com/xiaoyesensen/vite-doc-creator)。作者：[小野森森](https://github.com/xiaoyesensen)
+5. 安装[vite-doc-creator](https://github.com/saucesy/vite-doc-creator)。作者：[saucesy](https://github.com/saucesy)
 ```
 npm i vite-doc-creator -D
 ```
@@ -86,7 +86,7 @@ module.exports = {
    2. 目前不支持修改workspace内的md文件名（稍后更新会支持）
 
 ## 版本更新
-  20201009：v1.0.0
+  20221030：v1.0.0
 
 ## 原理
   1. 创建文档工程目录
