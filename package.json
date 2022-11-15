@@ -8,15 +8,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/saucesy/vite-doc-creator.git"
+    "url": "git+https://github.com/saucesy/bloger.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/saucesy/vite-doc-creator/issues"
+    "url": "https://github.com/saucesy/bloger/issues"
   },
-  "homepage": "https://github.com/saucesy/vite-doc-creator#readme",
+  "homepage": "https://github.com/saucesy/bloger#readme",
   "dependencies": {
     "highlight.js": "^11.6.0",
     "marked": "^4.1.1"
