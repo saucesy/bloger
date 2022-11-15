@@ -1,4 +1,4 @@
-# Vite-Doc-Creator
+# Bloger
 
 A fast and light Document Creator
 一个轻快的文档生成器
@@ -34,9 +34,9 @@ npm i vite -D
   "build": "vite build"
 }
 ```
-5. 安装[vite-doc-creator](https://github.com/saucesy/vite-doc-creator)。作者：[saucesy](https://github.com/saucesy)
+5. 安装[bloger](https://github.com/saucesy/bloger)。作者：[saucesy](https://github.com/saucesy)
 ```
-npm i vite-doc-creator -D
+npm i bloger -D
 ```
 
 ## vite插件配置
@@ -46,10 +46,10 @@ touch vite.config.js
 ```
 2. vite.config.js配置插件
 ```js
-const ViteDocCreator = require('vite-doc-creator');
+const Bloger = require('bloger');
 
 module.exports = {
-  plugins: [new ViteDocCreator()]
+  plugins: [new Bloger()]
 }
 ```
 
@@ -62,7 +62,7 @@ npm run dev
 1. 配置项位置
 ```js
 module.exports = {
-  plugins: [new ViteDocCreator({
+  plugins: [new Bloger({
     // 配置项
   })]
 }
@@ -71,7 +71,7 @@ module.exports = {
 
   |  配置项   | 说明 | 默认值                              | 必填 |
   |  ----  | ----  | ----                                | ----  |
-  |  title  | 网页title与header文字标题 | This is my first DOC by Vite-doc-creator | 否 |
+  |  title  | 网页title与header文字标题 | This is my first DOC by Bloger | 否 |
   | domain  | 生产环境下的域名（须带协议：http://或https://） | http://localhost | 否 |
   | port  | 生成环境下的端口号 | process.env.npm_config_port | 否 |
   > 注意：为了避免页面链接生成错误，请尽量不要在开发环境下设置domain与port，除非确保文档页面在该域名或该端口下可以正常访问。
